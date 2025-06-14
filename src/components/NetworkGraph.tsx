@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import {Network, type Node, type Edge} from 'vis-network';
 import { DataSet } from "vis-data";
-import {makeDataFromWardrobe, type WardrobeData} from "../processing.ts";
+import {makeDataFromWardrobe, type WardrobeData} from "../logic/generate-wardrobe.ts";
 import {clothes, outfits} from "../data/wardrobe.ts";
 
 const wardrobe: WardrobeData = makeDataFromWardrobe(clothes, outfits);

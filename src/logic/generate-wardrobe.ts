@@ -1,4 +1,4 @@
-import type {ClothingItem, Outfit} from "./data/wardrobe.ts";
+import type {ClothingItem, Outfit} from "../data/wardrobe.ts";
 import type {Edge, Node} from "vis-network";
 
 export type WardrobeData = {
