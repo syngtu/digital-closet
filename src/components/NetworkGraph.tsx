@@ -31,8 +31,6 @@ export const NetworkGraph = () => {
 
     const network = new Network(containerRef.current, data, options);
 
-    console.log(data.nodes)
-
     // Handle node selection
     network.on('selectNode', function (params) {
       const selectedNodeId = params.nodes[0];
@@ -43,14 +41,12 @@ export const NetworkGraph = () => {
         data.edges.update({
           id: edgeId,
           color: {
-            color: '#000000',
-            opacity: 1.5
+            color: 'pink',
+            opacity: 0.8
           }
         });
       });
 
-      console.log('data edges')
-      console.log(data.edges)
     });
 
   // Handle node deselection
@@ -60,8 +56,8 @@ export const NetworkGraph = () => {
         data.edges.update({
           id: edge.id,
           color: {
-            color: '#000000',
-            opacity: 0.1
+            color: 'pink',
+            opacity: 0.15
           }
         });
       });

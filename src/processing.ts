@@ -20,7 +20,7 @@ export const makeDataFromWardrobe = (clothes: ClothingItem[], outfits: Outfit[])
     const nodes: Node[] = clothes.map(item => ({
         ...item,
         label: undefined,
-        size: frequencyMap[item.id]**1.5 + 10 || 0,
+        size: frequencyMap[item.id]*2 + 10 || 0,
         shape: 'image',
     }));
 
@@ -57,8 +57,8 @@ export const makeDataFromWardrobe = (clothes: ClothingItem[], outfits: Outfit[])
             to: item.to,
             width: width**1.5,
             color: {
-                color: '#000000',
-                opacity: 0.15,
+                color: '#FFC0CB',
+                opacity: 0.5,
             }
         };
     });
