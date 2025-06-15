@@ -6,11 +6,11 @@ from torchvision import transforms
 import numpy as np
 import os
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "U-2-Net"))
+sys.path.append(os.path.join(os.path.dirname(__file__), "U2NET"))
 from model.u2net import U2NETP
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(BASE_DIR, "U-2-Net", "saved_models", "u2net", "u2netp.pth")
+model_path = os.path.join(BASE_DIR, "U2NET", "saved_models", "u2net", "u2netp.pth")
 
 model = U2NETP(3, 1)
 model.load_state_dict(torch.load(model_path, map_location=torch.device("cpu")))
