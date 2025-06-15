@@ -139,4 +139,5 @@ export const outfits: Outfit[] = [
     {id: 45, items: [74, 23, 12, 67, 75]},
     {id: 46, items: [23, 15, 14, 76]},
     {id: 47, items: [18, 19, 63, 77]},
+    {id: 48, items: [7, 21, 4, 5, 1, 54, 20, 44]},
 ]

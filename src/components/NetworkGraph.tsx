@@ -26,6 +26,19 @@ export const NetworkGraph = () => {
       },
       physics: {
         enabled: true,
+        solver: 'forceAtlas2Based',
+        forceAtlas2Based: {
+          // theta: 0.8, // accuracy vs speed
+          // gravitationalConstant: -20,
+          // damping: 0.8,
+          avoidOverlap: 1,
+          // centralGravity: 0.005, // smaller = spread out more, default 0.01
+          // springConstant: 0.06, // lower = looser
+        },
+      },
+      interaction: {
+        multiselect: true,
+        navigationButtons: true
       },
     };
 
@@ -41,7 +54,7 @@ export const NetworkGraph = () => {
         data.edges.update({
           id: edgeId,
           color: {
-            color: 'pink',
+            color: '#000000',
             opacity: 0.8
           }
         });
@@ -56,8 +69,8 @@ export const NetworkGraph = () => {
         data.edges.update({
           id: edge.id,
           color: {
-            color: 'pink',
-            opacity: 0.15
+            color: '#FFC0CB',
+            opacity: 0.5
           }
         });
       });
@@ -74,7 +87,6 @@ export const NetworkGraph = () => {
           style={{
             height: '100vh',
             width: '100vw',
-            border: '1px solid #ccc',
             margin: 0,
             padding: 0,
             boxSizing: 'border-box',
